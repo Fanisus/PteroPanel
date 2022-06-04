@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    background-color: black;
+    color: RGB(200, 200, 200);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+a {
+    display: block;
+    cursor: pointer;
+}
+
+/* div id="header" start*/
+#header {
+    background-color: black;
+    /* color: white; */
+    height: 7vh;
+    width: 100vw;
+    float: right;
+    border-bottom: 5px solid gray;
+}
+
+#header ul {
+    height: 7vh;
+    list-style-type: none;
+    background-color: black;
+}
+
+#header ul li {
+    height: 7vh;
+    padding: 0px 5px;
+    list-style-type: none;
+    background-color: black;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#header ul li a:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+#header ul li a {
+    text-decoration: none;
+    background-color: black;
+    /* color: white; */
+    display: block;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-decoration: none;
+    padding: 10px 10px;
+
+}
+
+#header-navigation-left {
+    /* margin-left: 5vw; */
+    list-style: none;
+    float: left;
+    vertical-align: middle;
+}
+
+#header-navigation-right {
+    float: right;
+    vertical-align: middle;
+    list-style: none;
+}
+
+.header-navigation-left-open {
+    animation-name: header-navigation-left-open;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+.header-navigation-left-close {
+    animation-name: header-navigation-left-close;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes header-navigation-left-open {
+    from {
+        margin-left: 5vw;
+    }
+
+    to {
+        margin-left: 18vw;
+    }
+}
+
+@keyframes header-navigation-left-close {
+    from {
+        margin-left: 18vw;
+    }
+
+    to {
+        margin-left: 5vw;
+    }
+}
+
+/* div id="header" end */
+
+/* dic id="sidebar" start */
+#sidebar {
+    background-color: chocolate;
+    /* color: white; */
+    height: 100vh;
+    width: 5vw;
+    margin-top: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: rgb(80, 80, 80);
+    border-radius: 10px;
+    height: 10vh;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: black;
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgb(90, 90, 90);
+}
+
+.sidebar-open {
+    animation-name: sidebar-animation-open;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.sidebar-close {
+    animation-name: sidebar-animation-close;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+.content-open {
+    animation-name: content-animation-open;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.content-close {
+    animation-name: content-animation-close;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes content-animation-open {
+    from {
+        margin-left: 5vw;
+    }
+
+    to {
+        margin-left: 20vw;
+    }
+}
+
+@keyframes content-animation-close {
+    from {
+        margin-left: 20vw;
+    }
+
+    to {
+        margin-left: 5vw;
+    }
+}
+
+@keyframes sidebar-animation-open {
+    from {
+        width: 5vw;
+    }
+    to {
+        width: 20vw;
+    }
+
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+@keyframes sidebar-animation-close {
+    from {
+        width: 20vw;
+    }
+    to {
+        width: 5vw;
+    }
+
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+#hostname {
+    height: 7vh;
+    width: inherit;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+#navbar {
+    width: calc(100%);
+    background-color: black;
+    text-overflow: ellipsis;
+    /* text-align: center; */
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul {
+    width: inherit;
+    height: 7vh;
+    text-overflow: ellipsis;
+    background-color: blueviolet;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#navbar a {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: black;
+    /* color: white; */
+    display: block;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#navbar p {
+    margin-left: 15px;
+    background-color: transparent;
+}
+
+#sidebar-li {
+    border: 5px;
+    height: 8vh;
+    padding: 0px 5px;
+    list-style-type: none;
+    background-color: black;
+}
+
+#sidebar-img {
+    background-color: transparent;
+}
+
+#sidebar-li a:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+/* div id="sidebar" end */
+.sidebar-text {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+#content {
+    height: 70vh;
+    width: 100vw;
+    margin-left: 5vw;
+    padding-left: 1vw;
+    overflow: ;
+}

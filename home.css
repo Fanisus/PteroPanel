@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    background-color: blueviolet;
+    color: white;
+}
+#header {
+    background-color: aqua;
+    color: white;
+    height: 7vh;
+    width: 100vw;
+    float: top;
+    
+}
+#header ul{
+    
+    margin-left: 10vw;
+    list-style-type: none;
+    background-color: aqua;
+}
+#header ul li{
+    list-style-type: none;
+    background-color: aqua;
+    display: inline;
+}
+#header ul li a{
+    text-decoration: none;
+    background-color: aqua;
+    color: white;
+}
+
+#header-navigation-left {
+    margin-left: 10vw;
+	list-style: none;
+    display: inline;
+    vertical-align: middle;
+}
+#header-navigation-right li {
+    display: inline-flex;
+    vertical-align: middle;
+    list-style: none;
+}

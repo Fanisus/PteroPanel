@@ -1,0 +1,18 @@
+{
+    "users": {
+        "1": {
+            "username": "Fanisus",
+            "email": "09rfanisus@gmail.com",
+            "password": "damn",
+            "account_type": ["account", "discord", "google"],
+            "role": "admin",
+            "created_at": "2020-01-01 00:00:00",
+            "last_login": "2020-01-01 00:00:00",
+            "last_login_ip": "",
+            "access": [
+                "admin"
+            ],
+            "remember_me": true
+        }
+    }
+}
