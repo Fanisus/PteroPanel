@@ -13,7 +13,8 @@
     <div id="sidebar">
         <div id="sidebar-header">
             <div id="sidebar-header-content">
-                <img src="img/settings.png" id="sidebar-header-image" class="img_text-align-middle">
+                <img src="img/icons8-api-96.png" id="sidebar-header-image" class="img_text-align-middle"
+                    onerror="this.style.display='none'">
                 <span id="sidebar-header-heading" class="padding-left-10px">TurnOver Hosting</span>
             </div>
             <img src="img/icons8-chevron-right-96.png" id="sidebar-button" onclick="sidebar_size_toggle()">
@@ -21,22 +22,122 @@
         <div id="sidebar-body">
             <div id="sidebar-body-content">
                 <ul>
-                    <li class="sidebar-body-content-li"><img src="img/icons8-home-96.png" id="icon"
-                            class="img_text-align-middle"><a href="/dashboard" class="padding-left-10px">Dashboard</a>
-                    </li>
-                    <li class="sidebar-body-content-li"><img src="img/icons8-server-96.png" id="icon"
-                            class="img_text-align-middle"><a href="/servers" class="padding-left-10px">Servers</a></li>
-
-
-                    <li class="sidebar-body-content-li "><a href="/store" id="t"><img src="img/icons8-product-96.png"
-                                id="icon" class="img_text-align-middle">
+                    <li class="sidebar-body-content-li"><a href="/dashboard" class="li-full-block"><img
+                                src="img/icons8-home-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
                             <div class="padding-left-10px sidebar-body-content-li-text">
-                                <p>Resource
-                                    Store</p>
+                                <p>Dashboard</p>
                             </div>
-
-                        </a></li>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li"><a href="/servers" class="li-full-block"><img
+                                src="img/icons8-server-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Servers</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li"><a href="/store" class="li-full-block"><img
+                                src="img/icons8-product-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Resource Store</p>
+                            </div>
+                        </a>
+                    </li>
                     <li class="sidebar-body-content-li-topic"><b>Administration</b></li>
+                    <li class="sidebar-body-content-li"><a href="/admin/dashboard class=" li-full-block"><img
+                                src="img/icons8-home-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Admin Dashboard</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li"><a href="/admin/settings" class="li-full-block"><img
+                                src="img/icons8-settings-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Settings</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li"><a href="/admin/api" class="li-full-block"><img
+                                src="img/icons8-api-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>API</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li-topic"><b>Server Management</b></li>
+                    <li class="sidebar-body-content-li"><a href="/admin/users" class="li-full-block"><img
+                                src="img/icons8-users-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Users</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li"><a href="/admin/servers" class="li-full-block"><img
+                                src="img/icons8-server-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Servers</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li"><a href="/admin/products" class="li-full-block"><img
+                                src="img/icons8-list-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Products</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li"><a href="/admin/store" class="li-full-block"><img
+                                src="img/icons8-shopping-cart-promotion-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Resource Store</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li"><a href="/admin/vouchers" class="li-full-block"><img
+                                src="img/icons8-voucher-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Vouchers</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li-topic"><b>Others</b></li>
+                    <li class="sidebar-body-content-li"><a href="/admin/usefullinks" class="li-full-block"><img
+                                src="img/icons8-link-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Useful Links</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li-topic"><b>Logs</b></li>
+                    <li class="sidebar-body-content-li"><a href="/admin/payments" class="li-full-block"><img
+                                src="img/icons8-transaction-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Payments</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sidebar-body-content-li"><a href="/admin/activitylogs" class="li-full-block"><img
+                                src="img/icons8-activity-history-96.png" id="icon" class="img_text-align-middle"
+                                onerror="this.style.display='none'">
+                            <div class="padding-left-10px sidebar-body-content-li-text">
+                                <p>Activity Logs</p>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
