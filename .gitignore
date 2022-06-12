@@ -128,3 +128,5 @@ dist
 
 # Custom
 nodemon.json
+sslcertificate.crt
+sslkey.key
