@@ -1,4 +1,128 @@
-div {
-    height: 95vh;
-    width: 95vw;
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+:root {
+    --sidebar-large-width: 20vw;
+    --sidebar-small-width: 20vw;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: white;
+    text-decoration: none;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 100;
+    list-style-type: none;
+    background-color: transparent;
+}
+body {
+    background-color: #2a2b3d;
+}
+.padding-left-10px {
+    padding-left: 10px;
+}
+.margin-right-10px {
+    margin-right: -10px;
+}
+.margin-left-10px {
+    margin-left: 20px;
+}
+.img_text-align-middle {
+    display: inline;
+    vertical-align: middle;
+}
+#t {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.sidebar-body-content-li-text {
+    display:inline-block;
+}
+
+#sidebar {
+    height: 100vh;
+    width: 20vw;
+    top: 0;
+    left: 0;
+    background-color: #252636;
+    position: fixed;
+}
+.sidebar-large {
+
+}
+#navbar {
+    width: 100vw;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+
+}
+#sidebar-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+#sidebar-button {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: calc(var(--sidebar-large-width) - 10px);
+}
+#sidebar-button:hover {
+    cursor: pointer;
+}
+#sidebar-header-content {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebar-header-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+#sidebar-header-heading {
+    display: inline;
+    overflow: hidden;
+}
+
+#sidebar-body {
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+
+}
+.sidebar-body-content-li {
+    margin: 20px 10px 20px 20px;
+    background-color: #252636;
+    transition: all 50ms ease-in-out;
+}
+.sidebar-body-content-li:hover {
+    border: 3px solid #34354a;
+    background-color: #34354a;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    transition: all 50ms ease-in-out;
+    cursor: pointer;
+}
+.sidebar-body-content-li-topic {
+    text-align: center;
+}
+#icon {
+    height: 24px;
+    width: 24px;
 }

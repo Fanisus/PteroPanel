@@ -1,1 +1,0 @@
-sidebar = body.querySelector(".navbar")

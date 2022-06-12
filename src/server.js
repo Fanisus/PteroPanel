@@ -1,38 +1,26 @@
 const express = require('express');
+const https = require('https');
 var multer = require('multer');
 var upload = multer();
 var cookies = require("cookie-parser");
 const crypto = require('crypto');
 const flaster = require('flaster-db');
+const fs = require('fs');
 const path = require('path');
 const db_users = new flaster.Database('./Database', {
     deep: true,
     file: 'authentication.json'
 })
-const app = express();
-const PORT = process.env.PORT || 8080;
+const key = fs.readFileSync('./sslkey.key');
+const cert = fs.readFileSync('./sslcertificate.crt');
+const app = express()
+
+//const server = https.createServer({ key: key, cert: cert }, app);
+const PORT = process.env.PORT || 3054;
 app.use(upload.array());
 app.use(cookies());
 
 const authTokens = {};
-
-// app.route('/login').get(async (req, res) => {
-//     let authToken;
-//     try {
-//         authToken = req.cookies['authToken'];
-//     } catch (error) {
-
-//     }
-//     console.log(authToken);
-//     if (authTokens[authToken]) {
-//         console.log("auth")
-//         setTimeout(() => {
-//             res.redirect('/home');
-//         }, 2000);
-//     } else {
-//         res.sendFile("login.html", { root: "./public" });
-//     }
-// })
 
 
 app.use(async (req, res, next) => {
@@ -48,7 +36,7 @@ app.use(async (req, res, next) => {
             if (authTokens[authToken] != undefined || authTokens[authToken] != null) {
                 console.log("auth")
                 setTimeout(() => {
-                    window.location.href = "/home";
+                    res.redirect("/home");
                 }, 2000);
             } else {
                 next()
@@ -136,6 +124,12 @@ setInterval(() => {
 app.listen(PORT, () => {
     console.log('Server connected at:', PORT);
 });
-app.get('/l', (req, res) => {
-    res.send("hi")
-});
+
+// server.listen(PORT, () => {
+//     console.log('Server connected at:', PORT);
+// })
+//server.listen(PORT)
+// app.listen = function(port) {
+//     server.listen(port);
+//     console.log('info', "COTTONMOUTH server listening on port " + port);
+// };
