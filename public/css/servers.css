@@ -2,7 +2,7 @@
 
 :root {
     --sidebar-large-width: 20vw;
-    --sidebar-small-width: 5vw;
+    --sidebar-small-width: 20vw;
 }
 
 * {
@@ -18,7 +18,7 @@
 }
 
 .hide {
-    display: none !important;
+    display: none;
 }
 
 ::-webkit-scrollbar {
@@ -67,23 +67,17 @@ body {
 .inline-block {
     display: inline-block;
 }
-.sidebar-small {
-    width: 10vw;
-}
-.sidebar-large {
-    width: 20vw;
-}
+
 #sidebar {
     height: 100vh;
+    width: 20vw;
     top: 0;
     left: 0;
     background-color: #252636;
     position: fixed;
-    width: var(--current-sidebar-width);
-    transition: 500ms ease-in-out
 }
 
-
+.sidebar-large {}
 
 #navbar {
     width: 100vw;
@@ -110,8 +104,7 @@ body {
     position: absolute;
     height: 20px;
     width: 20px;
-    left: calc(var(--current-sidebar-width) - 10px);
-    transition: 500ms ease-in-out;
+    left: calc(var(--sidebar-large-width) - 10px);
 }
 
 #sidebar-button:hover {
@@ -145,18 +138,17 @@ body {
     height: 90%;
     overflow-y: scroll;
 }
-ul {
-    margin-left: 10px;
-}
+
 .sidebar-body-content-li {
+    margin: 20px 10px 20px 20px;
     background-color: #252636;
-    padding: 10px 10px 10px 10px;
     transition: all 50ms ease-in-out;
 }
 
 .sidebar-body-content-li:hover {
-    /* border: 3px solid #34354a; */
+    border: 3px solid #34354a;
     background-color: #34354a;
+    padding: 5px 5px 5px 5px;
     border-radius: 10px;
     transition: all 50ms ease-in-out;
     cursor: pointer;
@@ -175,13 +167,10 @@ ul {
     width: 60px;
 }
 #body {
-    position: absolute;
     background-color: transparent;
     height: auto;
-    width: calc(100vw - var(--current-sidebar-width));
-    right: 0;
-    transition: 500ms ease-in-out;
-    /* margin-left: 20vw; */
+    width: 80vw;
+    margin-left: 20vw;
 }
 #body-content {
     padding: 10px 10px 10px 10px;

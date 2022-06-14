@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/servers.css">
     <title>Document</title>
 </head>
 
@@ -13,127 +13,127 @@
     <div id="sidebar">
         <div id="sidebar-header">
             <div id="sidebar-header-content">
-                <img src="img/icons8-api-96.png" id="sidebar-header-image" class="img_text-align-middle"
+                <img src="{avatarurl}" id="sidebar-header-image" class="img_text-align-middle margin-right-10px"
                     onerror="this.style.display='none'">
-                <span id="sidebar-header-heading" class="padding-left-10px">TurnOver Hosting</span>
+                <span id="sidebar-header-heading">{username}</span>
             </div>
-            <img src="img/icons8-chevron-right-96.png" id="sidebar-button" onclick="sidebar_size_toggle()">
+            <img src="img/icons8-chevron-right-96.png" id="sidebar-button" onclick="sidebar_size_toggle()" >
         </div>
         <div id="sidebar-body">
             <div id="sidebar-body-content">
                 <ul>
                     <li class="sidebar-body-content-li"><a href="/dashboard" class="li-full-block"><img
-                                src="img/icons8-home-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-home-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Dashboard</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li"><a href="/servers" class="li-full-block"><img
-                                src="img/icons8-server-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-server-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Servers</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li"><a href="/store" class="li-full-block"><img
-                                src="img/icons8-product-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-product-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Resource Store</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li-topic"><b>Administration</b></li>
                     <li class="sidebar-body-content-li"><a href="/admin/dashboard class=" li-full-block"><img
-                                src="img/icons8-home-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-home-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Admin Dashboard</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li"><a href="/admin/settings" class="li-full-block"><img
-                                src="img/icons8-settings-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-settings-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Settings</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li"><a href="/admin/api" class="li-full-block"><img
-                                src="img/icons8-api-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-api-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>API</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li-topic"><b>Server Management</b></li>
                     <li class="sidebar-body-content-li"><a href="/admin/users" class="li-full-block"><img
-                                src="img/icons8-users-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-users-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Users</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li"><a href="/admin/servers" class="li-full-block"><img
-                                src="img/icons8-server-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-server-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Servers</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li"><a href="/admin/products" class="li-full-block"><img
-                                src="img/icons8-list-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-list-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Products</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li"><a href="/admin/store" class="li-full-block"><img
-                                src="img/icons8-shopping-cart-promotion-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-shopping-cart-promotion-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Resource Store</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li"><a href="/admin/vouchers" class="li-full-block"><img
-                                src="img/icons8-voucher-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-voucher-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Vouchers</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li-topic"><b>Others</b></li>
                     <li class="sidebar-body-content-li"><a href="/admin/usefullinks" class="li-full-block"><img
-                                src="img/icons8-link-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-link-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Useful Links</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li-topic"><b>Logs</b></li>
                     <li class="sidebar-body-content-li"><a href="/admin/payments" class="li-full-block"><img
-                                src="img/icons8-transaction-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-transaction-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Payments</p>
                             </div>
                         </a>
                     </li>
                     <li class="sidebar-body-content-li"><a href="/admin/activitylogs" class="li-full-block"><img
-                                src="img/icons8-activity-history-96.png" id="icon" class="img_text-align-middle"
+                                src="img/icons8-activity-history-96.png" class="icon img_text-align-middle"
                                 onerror="this.style.display='none'">
-                            <div class="padding-left-10px sidebar-body-content-li-text">
+                            <div class="padding-left-10px inline-block">
                                 <p>Activity Logs</p>
                             </div>
                         </a>
@@ -143,9 +143,16 @@
         </div>
     </div>
     <div id="navbar">
+        <div id="navbar-content">
 
+        </div>
+    </div>
+    <div id="body">
+        <div id="body-content">
+
+        </div>
     </div>
 </body>
-<script src="js/dashboard.js"></script>
+<script src="js/dashboard.js" defer></script>
 
 </html>
