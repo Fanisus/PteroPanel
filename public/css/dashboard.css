@@ -5,6 +5,10 @@
     --sidebar-small-width: 5vw;
 }
 
+#discordid {
+    font-size: x-small;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -96,12 +100,25 @@ body {
 
 
 #navbar {
-    width: 100vw;
     height: 10vh;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #6f6486;
+}
 
+#navbar-content {
+    height: 10vh;
+}
+
+.exta-link {
+    display: table;
+    margin-left: 10px;
+}
+
+.a-link {
+    padding-right: 20px;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #sidebar-header {
@@ -113,7 +130,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid cyan;
+    border-bottom: 1px solid #433c51;
 }
 
 #sidebar-button {
@@ -122,6 +139,7 @@ body {
     width: 20px;
     left: calc(var(--current-sidebar-width) - 10px);
     transition: 500ms ease-in-out;
+    transform: rotate(270deg);
 }
 
 #sidebar-button:hover {
@@ -156,8 +174,16 @@ body {
     overflow-y: scroll;
 }
 
-ul {
+#sidebar-body-content-li {
     margin: 7px 7px 7px 7px;
+}
+
+#container-right {
+    position: absolute;
+    width: calc(100vw - var(--current-sidebar-width));
+    right: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
 }
 
 hr {
@@ -193,6 +219,11 @@ hr {
 .icon-body {
     height: 50px;
     width: 50px;
+}
+
+.icon-header {
+    height: 20px;
+    width: 20px;
 }
 
 #body {

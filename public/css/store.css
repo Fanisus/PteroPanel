@@ -2,9 +2,11 @@
 
 :root {
     --sidebar-large-width: 20vw;
-    --sidebar-small-width: 20vw;
+    --sidebar-small-width: 5vw;
 }
-
+#discordid {
+    font-size: x-small;
+}
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +20,8 @@
 }
 
 .hide {
-    display: none;
+    display: none !important;
+    transition: all 0.5s ease-in-out;
 }
 
 ::-webkit-scrollbar {
@@ -26,15 +29,19 @@
     height: 5px;
     width: 5px;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: #3c3f58;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background-color: #161720;
 }
+
 ::-webkit-scrollbar-corner {
     background-color: #252636;
 }
+
 body {
     background-color: #2a2b3d;
 }
@@ -42,9 +49,11 @@ body {
 .padding-left-10px {
     padding-left: 10px;
 }
+
 .padding-right-10px {
     padding-right: 10px;
 }
+
 .margin-right-10px {
     margin-right: 10px;
 }
@@ -68,16 +77,25 @@ body {
     display: inline-block;
 }
 
+.sidebar-small {
+    width: 10vw;
+}
+
+.sidebar-large {
+    width: 20vw;
+}
+
 #sidebar {
     height: 100vh;
-    width: 20vw;
     top: 0;
     left: 0;
     background-color: #252636;
     position: fixed;
+    width: var(--current-sidebar-width);
+    transition: 500ms ease-in-out
 }
 
-.sidebar-large {}
+
 
 #navbar {
     width: 100vw;
@@ -97,14 +115,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #433c51;
 }
 
 #sidebar-button {
     position: absolute;
     height: 20px;
     width: 20px;
-    left: calc(var(--sidebar-large-width) - 10px);
+    left: calc(var(--current-sidebar-width) - 10px);
+    transition: 500ms ease-in-out;
 }
 
 #sidebar-button:hover {
@@ -121,8 +140,8 @@ body {
 }
 
 #sidebar-header-image {
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
 }
 
@@ -139,16 +158,26 @@ body {
     overflow-y: scroll;
 }
 
+ul {
+    margin: 7px 7px 7px 7px;
+}
+
+hr {
+    border: 2px solid rgb(210, 210, 210);
+    margin: 10px 0px 10px 0px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
 .sidebar-body-content-li {
-    margin: 20px 10px 20px 20px;
     background-color: #252636;
+    padding: 10px 10px 10px 10px;
     transition: all 50ms ease-in-out;
 }
 
 .sidebar-body-content-li:hover {
-    border: 3px solid #34354a;
+    /* border: 3px solid #34354a; */
     background-color: #34354a;
-    padding: 5px 5px 5px 5px;
     border-radius: 10px;
     transition: all 50ms ease-in-out;
     cursor: pointer;
@@ -162,24 +191,32 @@ body {
     height: 24px;
     width: 24px;
 }
+
 .icon-body {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
 }
+
 #body {
+    position: absolute;
     background-color: transparent;
     height: auto;
-    width: 80vw;
-    margin-left: 20vw;
+    width: calc(100vw - var(--current-sidebar-width));
+    right: 0;
+    transition: 500ms ease-in-out;
+    /* margin-left: 20vw; */
 }
+
 #body-content {
     padding: 10px 10px 10px 10px;
 }
+
 #body-stastics-overview {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
+
 .body-content-small-box {
     border: 3px solid #34354a;
     background-color: #34354a;
