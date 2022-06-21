@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="logindetails">
+            <div id="form-div">
+                <h1 id="title">TurnOver Hosting</h1>
+                <br>
+                <br>
+                <h3 id="login-description">Sign in to start your session</h3>
+                <br>
+                <form id="loginform" method="post" enctype="multipart/form-data" action="/login">
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Email" required autofocus>
+                    <br>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required autofocus>
+                    <br>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <p id="text">Remember Me</p>
+                    <br>
+                    <br>
+                    <input type="submit" id="submit" class="form-control" value="Login">
+                </form>
+                <br>
+                <a href="/home" id="forgotpassword">Forgot Password?</a>
+                <br>
+                <a href="/register" id="register">Register/Sign Up</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/login.js"></script>
+
+</html>
